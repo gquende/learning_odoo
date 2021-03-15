@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record model="ir.ui.view" id="model_id">
+        <field name="name">partnersmodel_form</field>
+         <field name="model">partners.model.links</field>
+        <field name="priority" eval="16"></field>
+
+
+        <field name="arch" type="xml">
+            <form string="Insercao de Links">
+                <sheet>
+                    <group col="2">
+                        <field name="url"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="model_tree">
+        <field name="name">Links</field>
+        <field name="model">partners.model.links</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Lista links">
+                <field name="url"/>
+            </tree>
+            <!-- view content: <form>, <tree>, <graph>, ... -->
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_model">
+            <field name="name">Links</field>
+            <field name="res_model">partners.model.links</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="plans_root" name="Plans" />
+    <menuitem id="modules_base" name="Modules" action="act_model" parent="plans_root"/>
+
+
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record model="ir.ui.view" id="model_id">
+    <field name="name">test.model.form</field>
+    <field name="model">test.model</field>
+    <field name="priority" eval="16"/>
+    <field name="arch" type="xml">
+        <form string="Cadastro Teste">
+         <sheet>
+              <group col="2">
+              <field name="name"/>
+            <field name="age"/>
+          </group>
+
+         </sheet>
+        </form>
+
+        <!-- view content: <form>, <tree>, <graph>, ... -->
+    </field>
+    </record>
+
+    <record model="ir.ui.view" id="model_tree">
+    <field name="name">test.model.tree</field>
+    <field name="model">test.model</field>
+    <field name="priority" eval="16"/>
+    <field name="arch" type="xml">
+        <tree string="Lista Teste">
+            <field name="name"/>
+            <field name="age"/>
+        </tree>
+
+        <!-- view content: <form>, <tree>, <graph>, ... -->
+    </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="act_test_model">
+            <field name="name">test model</field>
+            <field name="res_model">test.model</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="cadastro_root" name="Cadastro" />
+    <menuitem id="test_menu" name="Test Cadastro" action="act_test_model" parent="cadastro_root"/>
+    <menuitem id="test_menu2" name="Test Cadastro2" action="act_test_model" parent="cadastro_root"/>
+    <menuitem id="test_menu3" name="Test Cadastro3" action="act_test_model" parent="cadastro_root"/>
+
+</odoo>
