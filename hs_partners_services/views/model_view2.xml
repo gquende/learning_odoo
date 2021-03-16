@@ -38,8 +38,16 @@
             <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="plans_root" name="Plans" />
-    <menuitem id="modules_base" name="Modules" action="act_model" parent="plans_root"/>
+
+    <menuitem id="HS_Partners_root" name="HS Partners"> </menuitem>
+    <menuitem id="costmers" name="Costmers" parent="HS_Partners_root"></menuitem>
+    <menuitem id="subscription" name="Subscriptions" parent="HS_Partners_root"></menuitem>
+    <menuitem id="configuration_root" name="Configuration" parent="HS_Partners_root"></menuitem>
+
+    <menuitem id="plans_root" name="Plans"  parent="configuration_root"/>
+    <menuitem id="modules_base" name="Modules" parent="configuration_root"/>
+     <menuitem id="subscription" name="Subscription" parent="HS_Partners_root"/>
+    <menuitem id="links" name="Links" parent="configuration_root"/>
 
 
 </odoo>

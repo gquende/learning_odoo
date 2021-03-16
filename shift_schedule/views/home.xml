@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+<record model="ir.ui.view" id="model_id">
+    <field name="name">departmentmodel.form</field>
+    <field name="model">department.model</field>
+    <field name="priority" eval="16"></field>
+    <field name="arch" type="xml">
+        <form string="Criar Departamento">
+            <sheet>
+                <group col="2">
+                    <field name="name"/>
+                </group>
+            </sheet>
+        </form>
+
+
+    </field>
+
+
+
+
+</record>
+
+
+
+
+
+
+</odoo>
+
+
+
