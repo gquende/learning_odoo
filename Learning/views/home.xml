@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+<!--
+ <record model="ir.ui.view" id="model_id">
+    <field name="name">usermodel.form</field>
+    <field name="model">user.model</field>
+    <field name="priority" eval="16"></field>
+    <field name="arch" type="xml">
+        <form string="Criar Departamento">
+            <sheet>
+                <group col="2">
+                    <field name="name"/>
+                    <field name="sexo"/>
+                </group>
+            </sheet>
+        </form>
+
+         <search>
+        <field name="name">
+        </field>
+    </search>
+    </field>
+
+
+</record>
+
+-->
+    <record id="action_learning" model="ir.actions.act_window">
+      <field name="name">Learning</field>
+        <field name="type">ir.actions.act.window</field>
+        <field name="res_model">user.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <p class="o_view_nocontent_smiling_face"> Create First user</p>
+    </record>
+
+    <menuitem id="learning_root" name="Learning Odoo"/>
+    <menuitem id="learning_user" name="Users" parent="learning_root" action="action_learning"></menuitem>
+
+
+
+</odoo>

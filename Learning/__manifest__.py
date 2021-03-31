@@ -1,5 +1,5 @@
 {
-    'name': "Shift Manager",
+    'name': "Learning Odoo",
 
     'summary': """This a shift manager created for any company""",
 
@@ -18,15 +18,13 @@
 
     # any module necessary for this one to work correctly
 
-    'depends': ['base','hr','calendar','website','web'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'views/home.xml',
-        'views/schedule.xml',
-        'views/shift.xml',
-        'views/homeweb.xml'
+
     ],
 
 
@@ -35,5 +33,4 @@
     'demo': [
         #'demo.xml',
             ],
-    'css': ['static/src/css/bootstrap.css'],
 }

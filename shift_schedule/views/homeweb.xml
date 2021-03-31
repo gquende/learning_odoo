@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+
+    <template id="index">
+
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/shift_schedule/static/src/bootstrap.css"/>
+        </xpath>
+        <title>Shift Calendar</title>
+       <div class="container">
+    <div class="search-inputs">
+
+        <div  >
+            <input class="date" type="date"/>
+            <input class="date" type="date"/>
+        </div>
+
+        <div class="dropdown dropdown-department">
+            <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Department
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+           <li>   Sales</li>
+           <li>   Administrator</li>
+            </ul>
+          </div>
+
+
+        <button class="btn btn-primary search-btn"> Search </button>
+
+    </div>
+
+    <div class="table-responsive">
+
+        <table class="table table-hover shift-table">
+            <tr class="active tb-head">
+                <td>Employee</td>
+                <td>Department</td>
+                <td>Monday</td>
+                <td>Tuesday</td>
+                <td>Wednewsday</td>
+                <td>Thurday</td>
+                <td>Friday</td>
+            </tr>
+
+
+            <tr>
+                <td>Adolfo Quende</td>
+                <td class="td-department">Administrator</td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+            </tr>
+
+            <tr>
+                <td>Geraldo Quende</td>
+                <td class="td-department">Sales</td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+            </tr>
+
+            <tr>
+                <td>Rosangela Agostinho</td>
+                <td class="td-department">Sales</td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+            </tr>
+
+
+
+            <tr>
+                <td>Edmilson Julio</td>
+                <td class="td-department">Sales</td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+               <td>
+                <div class="time">
+                    <div class="start-time">8:00</div>
+                    <div class="end-time">18:00</div>
+                </div>
+               </td>
+            </tr>
+
+
+
+
+        </table>
+
+
+    </div>
+
+
+
+
+</div>
+    </template>
+
+
+
+
+</odoo>

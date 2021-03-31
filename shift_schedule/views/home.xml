@@ -1,31 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <odoo>
+    <!--
+        <record model="ir.ui.view" id="model_id">
+        <field name="name">departmentmodel.form</field>
+        <field name="model">department.model</field>
+        <field name="priority" eval="16"></field>
+        <field name="arch" type="xml">
+            <form string="Criar Departamento">
+                <sheet>
+                    <group col="2">
+                        <field name="name"/>
+                        <field name="funcionario"/>
+                    </group>
+                </sheet>
+            </form>
 
-<record model="ir.ui.view" id="model_id">
-    <field name="name">departmentmodel.form</field>
-    <field name="model">department.model</field>
-    <field name="priority" eval="16"></field>
-    <field name="arch" type="xml">
-        <form string="Criar Departamento">
-            <sheet>
-                <group col="2">
-                    <field name="name"/>
-                </group>
-            </sheet>
-        </form>
-
-
-    </field>
-
-
-
-
-</record>
-
-
+             <search>
+            <field name="name">
+            </field>
+        </search>
+        </field>
+    </record>-->
 
 
+    <record model="ir.ui.view" id="tree_id">
+        <field name="name">shiftmodel.tree</field>
+        <field name="model">shift.model</field>
+        <field name="priority" eval="16"></field>
+        <field name="arch" type="xml">
+            <tree string="Create Shift">
+                <field name="employee_id"/>
+                <field name="date" string="Date"></field>
+                <field name="start_time" string="Start time"/>
+                <field name="stop_time" string="Stop Time"></field>
+                <field name="department_id"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="act_schedule">
+        <field name="name">Agendas</field>
+        <field name="res_model">department.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="act_shift">
+        <field name="name">Shifts</field>
+        <field name="res_model">shift.model</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <!--<field name="context">{search_default} </field>-->
+    </record>
+
+    <template id="create_test" name="Create Test">
+    <t t-call="website.layout">
+        <div id="wrap">
+            <div class="oe_structure">
+                <div class="container">
+                  <form role="form" method="POST">
+                      <input type="text"> </input>
+                  </form>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </t>
+
+
+
+    </template>
+
+
+
+
+    <menuitem id="department_root" name="Shift Schedule"/>
+
+    <menuitem id="shift_menu" name="Shift" action="act_shift" parent="department_root"/>
+    <menuitem id="schedule_menu" name="Schedule" action="act_schedule" parent="department_root"/>
 
 
 </odoo>

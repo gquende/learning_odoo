@@ -1,1 +1,1 @@
-from . import departments, shift
+from . import departments, shift, employee
