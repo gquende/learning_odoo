@@ -24,7 +24,6 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/home.xml',
-        'views/schedule.xml',
         'views/shift.xml',
         'views/homeweb.xml'
     ],
